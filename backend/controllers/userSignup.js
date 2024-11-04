@@ -64,6 +64,14 @@ export const logout = async (req, res, next) => {
 
 
 
-export const home = async(req,res,next)=>{
-    res.json({ message: "Welcome to the home page!", user: req.user });
+// export const home = async(req,res,next)=>{
+//     res.json({ message: "Welcome to the home page!", user: req.user });
+// }
+
+export const getProfile = async(req,res,next) =>{
+    try {
+        res.json(req.user);
+    } catch (error) {
+        res.json({message:error.message});
+    }
 }
