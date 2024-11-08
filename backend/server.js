@@ -7,7 +7,6 @@ import db from './config/db.js';
 const maxCPUs = os.cpus().length;
 if (cluster.isPrimary) {
     console.log(`primary ${process.pid} is running`);
-    
     // fork workers
     for (let i = 0; i < maxCPUs; i++) {
         cluster.fork()

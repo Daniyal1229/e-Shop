@@ -1,0 +1,127 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #014646;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    span {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    input[type="search"] {
+        padding: 0.8rem 1rem;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        width: 300px;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    input[type="search"]:focus {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-links, .nav-links2 {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffcd07;
+        }
+    }
+
+    .logout {
+        cursor: pointer;
+        color: #014646;
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        background-color: #ffcd07;
+        transition: all 0.3s ease;
+    }
+
+    .logout:hover {
+        background-color: #ffd84d;
+        transform: translateY(-2px);
+    }
+
+    /* Tablet Responsive */
+    @media (max-width: 1024px) {
+        padding: 1rem;
+
+        input[type="search"] {
+            width: 250px;
+        }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+
+        input[type="search"] {
+            width: 90%;
+            max-width: 300px;
+        }
+
+        .nav-links, .nav-links2 {
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            a {
+                font-size: 0.9rem;
+            }
+        }
+
+        .logout {
+            padding: 0.6rem 1.2rem;
+        }
+    }
+
+    /* Small Mobile Responsive */
+    @media (max-width: 480px) {
+        span {
+            font-size: 1.5rem;
+        }
+
+        input[type="search"] {
+            width: 85%;
+            padding: 0.6rem;
+        }
+
+        .nav-links, .nav-links2 {
+            gap: 0.8rem;
+
+            a {
+                font-size: 0.8rem;
+            }
+        }
+
+        .logout {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+    }
+}

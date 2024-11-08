@@ -1,0 +1,7 @@
+{
+    "javascript.suggest.completeFunctionCalls": true,
+    "codeium.enableInComments": false,
+    "cody.autocomplete.completeSuggestWidgetSelection": true,
+    "cody.autocomplete.formatOnAccept": false,
+    "cody.autocomplete.disableInsideComments": false
+}
